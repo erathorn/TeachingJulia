@@ -57,7 +57,7 @@ md"
 
 Assignment is done using the ```=``` sign and we can assign to any unicode symbol. We can get unicode symbols using latex completion (for most editors).
 
-**All Julia operations return a variable!**
+**All Julia operations return a value!**
 "
 
 # ╔═╡ d7d6039c-ea92-425c-8f9b-54a16c753ea7
@@ -192,6 +192,9 @@ phone_book["Turk"] = "916-CALL-TURK";
 # ╔═╡ 2841edc2-e177-494c-a1ba-f4a20b59b71d
 phone_book
 
+# ╔═╡ 6ecc5527-4f92-41e8-bac5-ec6d7ff4524a
+phone_book2 = Dict("Isra" => 123, "Marie" => "team_lead", "helena" => (1, 2))
+
 # ╔═╡ 7560baf8-1bfe-46ff-8b2f-9945b0bd50c0
 md"
 #### Arrays
@@ -287,6 +290,18 @@ A part of the matrix
 
 # ╔═╡ c0ed499f-2746-4d3e-974f-f5ca8409a150
 rand_mat[1:3, 3:4]
+
+# ╔═╡ b161dfc3-4b9c-43b0-83b1-fe06f452615f
+md"
+
+Matrices and Vectors of Vectors are two different things. When doing matrix multiplication using Vectors of Vectors will not work.
+"
+
+# ╔═╡ 540eacdb-1c76-4516-86cc-6edfe1d8b9f8
+rand_mat * rand(4,4)
+
+# ╔═╡ 86801325-9b7d-4b11-bbf5-8517587967a9
+vec_of_vec * rand(3,3)
 
 # ╔═╡ 2526e3d9-0230-4b91-b5bb-5d6d027c5f63
 md"
@@ -432,6 +447,9 @@ end
 # ╔═╡ b2ddfdcd-9f86-487b-bae7-45144acff911
 encounters(prof1, prof2)
 
+# ╔═╡ cacdca23-d245-4dc5-8b1c-ce49850a2a9c
+encounters(prof1, student1)
+
 # ╔═╡ 0677841e-0c79-4187-84cf-056ed6a267a6
 md"
 # Useful Packages
@@ -472,7 +490,7 @@ There are several packages and use cases which are helpful for scientific comput
 
 - [BioJulia](https://github.com/BioJulia)
 
-  - A collection of packates for bioinformatics and biology related problems
+  - A collection of packages for bioinformatics and biology related problems
 
 - [JuliaImages](https://juliaimages.github.io/latest/)
 
@@ -493,6 +511,14 @@ There are several packages and use cases which are helpful for scientific comput
 - [PyCall](https://github.com/JuliaPy/PyCall.jl)/[RCall](https://github.com/JuliaInterop/RCall.jl)
 
   - Call Python/R directly from Julia
+
+- [Distributed](https://docs.julialang.org/en/v1/stdlib/Distributed/)
+
+  - Package for Distributed Computing (adds pmap and similar operations)
+
+- [LoopVectorization](https://github.com/JuliaSIMD/LoopVectorization.jl)
+
+  - Easy control for threading and simd versions of loops
 
 "
 
@@ -2281,6 +2307,7 @@ version = "1.4.1+0"
 # ╟─b8b45c09-fa3b-4a77-a429-cab42e800776
 # ╠═7216a6f8-28ae-4e9c-8273-ad86495ea465
 # ╠═2841edc2-e177-494c-a1ba-f4a20b59b71d
+# ╠═6ecc5527-4f92-41e8-bac5-ec6d7ff4524a
 # ╟─7560baf8-1bfe-46ff-8b2f-9945b0bd50c0
 # ╠═25ca28e2-690a-4639-9a44-9b91888a354f
 # ╠═87956312-9300-4f45-8485-90b6cee73fc4
@@ -2304,6 +2331,9 @@ version = "1.4.1+0"
 # ╠═9b15f12a-2a1d-4d16-8dd7-8ee73c624d02
 # ╟─6e02fec2-e425-4825-ae5f-b75d895cd6a6
 # ╠═c0ed499f-2746-4d3e-974f-f5ca8409a150
+# ╟─b161dfc3-4b9c-43b0-83b1-fe06f452615f
+# ╠═540eacdb-1c76-4516-86cc-6edfe1d8b9f8
+# ╠═86801325-9b7d-4b11-bbf5-8517587967a9
 # ╟─2526e3d9-0230-4b91-b5bb-5d6d027c5f63
 # ╠═6ae6abe7-9361-4973-a686-9cd511e5cd96
 # ╠═6af6640d-2a18-445a-bf13-30f366b65ddb
@@ -2323,7 +2353,8 @@ version = "1.4.1+0"
 # ╠═0fcb507b-98ff-4fc4-8e8e-39764f68b5ac
 # ╠═df8f04b7-d938-435a-96d2-faee067afaf4
 # ╠═b2ddfdcd-9f86-487b-bae7-45144acff911
-# ╠═0677841e-0c79-4187-84cf-056ed6a267a6
+# ╠═cacdca23-d245-4dc5-8b1c-ce49850a2a9c
+# ╟─0677841e-0c79-4187-84cf-056ed6a267a6
 # ╟─cc039005-c4ed-441c-9bfd-aa404d6a0778
 # ╠═98bfd64d-1bd7-4d99-855e-3821cb6d61b9
 # ╟─e6e0595b-7d30-44fc-855e-741f9de6f08e
