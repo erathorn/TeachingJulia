@@ -490,6 +490,10 @@ There are several packages and use cases which are helpful for scientific comput
 
   - A collection of Packages for GPU computing (high and low level)
 
+- [PyCall](https://github.com/JuliaPy/PyCall.jl)/[RCall](https://github.com/JuliaInterop/RCall.jl)
+
+  - Call Python/R directly from Julia
+
 "
 
 # ╔═╡ cc039005-c4ed-441c-9bfd-aa404d6a0778
@@ -2319,7 +2323,7 @@ version = "1.4.1+0"
 # ╠═0fcb507b-98ff-4fc4-8e8e-39764f68b5ac
 # ╠═df8f04b7-d938-435a-96d2-faee067afaf4
 # ╠═b2ddfdcd-9f86-487b-bae7-45144acff911
-# ╟─0677841e-0c79-4187-84cf-056ed6a267a6
+# ╠═0677841e-0c79-4187-84cf-056ed6a267a6
 # ╟─cc039005-c4ed-441c-9bfd-aa404d6a0778
 # ╠═98bfd64d-1bd7-4d99-855e-3821cb6d61b9
 # ╟─e6e0595b-7d30-44fc-855e-741f9de6f08e
