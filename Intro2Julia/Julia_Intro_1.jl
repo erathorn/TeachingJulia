@@ -13,7 +13,7 @@ md"
 "
 
 # ╔═╡ 6a226338-9a38-42e1-8b3d-3f693f7253e4
-load("Resources/TweetYannLeCun.png")
+load("../Resources/TweetYannLeCun.png")
 
 # ╔═╡ 09673cd2-07a4-4328-af9b-7ad8071332ad
 md"
@@ -1482,7 +1482,7 @@ version = "17.4.0+0"
 
 # ╔═╡ Cell order:
 # ╟─ea03eee5-2743-45ec-96cf-cdac62a58ad4
-# ╟─6a226338-9a38-42e1-8b3d-3f693f7253e4
+# ╠═6a226338-9a38-42e1-8b3d-3f693f7253e4
 # ╟─09673cd2-07a4-4328-af9b-7ad8071332ad
 # ╟─6c884326-e8da-4fe7-9207-6c38f6b39c32
 # ╟─8140335c-1d8a-44f2-9be0-055dea063f38

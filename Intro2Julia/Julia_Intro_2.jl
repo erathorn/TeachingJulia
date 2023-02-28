@@ -15,7 +15,7 @@ First create a file handle.
 "
 
 # ╔═╡ 7589af1d-38e9-49a5-9c43-1915c2e1f669
-f = open("Resources/MyText.txt")
+f = open("../Resources/MyText.txt")
 
 # ╔═╡ 62c0cc02-c0d0-458d-89db-2966eade7d9f
 md"
@@ -42,7 +42,7 @@ However, it is recomended to use a do-block. At the end of the do-block the file
 "
 
 # ╔═╡ 189dc8ef-e021-4a78-9623-7632aba69758
-open("Resources/MyText.txt") do f
+open("../Resources/MyText.txt") do f
     # read from file
     lines = readlines(f)
 end
