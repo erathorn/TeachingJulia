@@ -85,7 +85,7 @@ If you have installed successfully installed Julia and typed `julia` into your t
 "
 
 # ╔═╡ eddb5322-e9d8-4c7a-b919-51265e328b3e
-load("Resources/REPL.png")
+load("../Resources/REPL.png")
 
 # ╔═╡ ac18b521-1136-431c-b000-b3d8023295f9
 md"
@@ -251,6 +251,15 @@ phone_book["Turk"] = "916-CALL-TURK";
 
 # ╔═╡ 2841edc2-e177-494c-a1ba-f4a20b59b71d
 phone_book
+
+# ╔═╡ 55d9d5c4-aeb9-4869-9ae0-4f1fafcaa9f7
+phone_book_2 = Dict("johannes" => 123, "Elisabeth" => "Munich")
+
+# ╔═╡ 6d14ef67-603e-4cf8-8e71-1acf459c565a
+phone_book_2["Lucas"] = π
+
+# ╔═╡ ae65ea2a-2e90-4e68-93cb-e159a761e0bd
+new_dict = Dict{String, String}("ab" => 12, "cd" => 45)
 
 # ╔═╡ 7560baf8-1bfe-46ff-8b2f-9945b0bd50c0
 md"
@@ -1521,6 +1530,9 @@ version = "17.4.0+0"
 # ╟─b8b45c09-fa3b-4a77-a429-cab42e800776
 # ╠═7216a6f8-28ae-4e9c-8273-ad86495ea465
 # ╠═2841edc2-e177-494c-a1ba-f4a20b59b71d
+# ╠═55d9d5c4-aeb9-4869-9ae0-4f1fafcaa9f7
+# ╠═6d14ef67-603e-4cf8-8e71-1acf459c565a
+# ╠═ae65ea2a-2e90-4e68-93cb-e159a761e0bd
 # ╟─7560baf8-1bfe-46ff-8b2f-9945b0bd50c0
 # ╠═25ca28e2-690a-4639-9a44-9b91888a354f
 # ╠═87956312-9300-4f45-8485-90b6cee73fc4

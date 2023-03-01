@@ -114,6 +114,12 @@ md"The fields of structs can be annotated with types."
 		y::Float64
 	end
 
+# ╔═╡ 7c3d6a74-f775-4aed-994e-b4c4d36caf70
+TPoint2D("ab", "cd")
+
+# ╔═╡ 8d3e65de-2d1f-428f-8d72-35bf22b8130d
+TPoint2D(3.9, 1.2)
+
 # ╔═╡ e537adcc-1023-4982-9f8e-bf3cb96f94d5
 md"
 ### Constructors
@@ -141,6 +147,12 @@ begin
 	PositivePoint2D(x) = PositivePoint2D(x, x) 
 end
 
+# ╔═╡ 4a42e8b3-b8ca-40cc-895c-8ec1ab59b949
+PositivePoint2D(3.2)
+
+# ╔═╡ cb9ded50-cac4-472f-9a98-e45ae27e0a23
+PositivePoint2D(3.2, 2.4)
+
 # ╔═╡ dc2b0bc9-7a8c-4167-85c9-36c2c6b4dc4a
 md"
 
@@ -161,6 +173,15 @@ We have defined a parametric type Point `Point{T}`. It has two fields, which are
 
 A `Point` in itself is a valid type object, with its respective concrete types as subtypes.
 "
+
+# ╔═╡ 160a8c6d-d21e-406f-bf5d-0b457bb95b86
+Point(3.2,3.4)
+
+# ╔═╡ 8e6e8d10-3b3c-4c1c-b116-fa3e0644fed0
+Point("ab", "ab")
+
+# ╔═╡ 3fb52e7b-3033-47db-a328-a077d99432d3
+Point(3, 2)
 
 # ╔═╡ 5cd434bf-a6d2-4cfe-9fc3-ed33a6074eec
 Point{Float64} <: Point
@@ -183,6 +204,9 @@ Although `Float64` is a subtype of `Real`, this is not the case for the differen
 
 # ╔═╡ 9cf304d8-0087-4f45-bc5b-4f59ec6ec607
  Point{Float64} <: Point{Real}
+
+# ╔═╡ c482122f-4679-4d95-b45a-7ffe37b1a317
+Float64 <: Real
 
 # ╔═╡ a9cd095f-4713-441e-8f3d-ef6cadbef293
 md"
@@ -225,6 +249,25 @@ begin
 
 	area(shape) = width(shape) * height(shape)
 end
+
+# ╔═╡ a1745e37-5bd6-455a-8ba5-91bc55eff736
+begin
+	struct myRectangle
+		w
+		h
+	end
+	myRectangle(x) = myRectangle(x, x)
+	
+end
+
+# ╔═╡ 43f1fbdf-64ec-4b2c-b456-1845383c4d6c
+myRectangle(4)
+
+# ╔═╡ b08ee620-a0f2-4da5-bfe3-f98b87396a16
+myRectangle(4,3)
+
+# ╔═╡ bd6bea5f-1676-41c0-b0ef-3be3ef201cf9
+
 
 # ╔═╡ 1b725a48-ea47-4f19-bbbc-95389b6772ba
 r = Rectangle(3, 4)
@@ -334,24 +377,36 @@ project_hash = "da39a3ee5e6b4b0d3255bfef95601890afd80709"
 # ╠═22f7fc4c-1f9d-46d0-a64c-fadc06db9178
 # ╟─fd20b634-2637-4d7e-81b9-c5febc18396a
 # ╠═96bd0dc6-aff0-419a-9cfd-a1b7efcd969b
-# ╠═bad5722b-0419-43a2-b384-0f3f1b53d5d2
+# ╟─bad5722b-0419-43a2-b384-0f3f1b53d5d2
 # ╠═2ae4c866-d4ba-4199-95da-e5ae0ecdd3bf
+# ╠═7c3d6a74-f775-4aed-994e-b4c4d36caf70
+# ╠═8d3e65de-2d1f-428f-8d72-35bf22b8130d
 # ╟─e537adcc-1023-4982-9f8e-bf3cb96f94d5
 # ╠═4f9eac83-e820-492d-ae34-a691dadd1c32
+# ╠═4a42e8b3-b8ca-40cc-895c-8ec1ab59b949
+# ╠═cb9ded50-cac4-472f-9a98-e45ae27e0a23
 # ╟─dc2b0bc9-7a8c-4167-85c9-36c2c6b4dc4a
 # ╠═89621d72-f180-4a5f-9caf-158e6a36b6b0
 # ╟─d2404a83-ea7b-495f-8a37-45f8924def09
+# ╠═160a8c6d-d21e-406f-bf5d-0b457bb95b86
+# ╠═8e6e8d10-3b3c-4c1c-b116-fa3e0644fed0
+# ╠═3fb52e7b-3033-47db-a328-a077d99432d3
 # ╠═5cd434bf-a6d2-4cfe-9fc3-ed33a6074eec
 # ╠═2e30a2ae-57db-4ba8-8c4a-8e016b40a928
-# ╠═13ee1934-f91b-4ac8-a9a5-d18aaab26c7f
+# ╟─13ee1934-f91b-4ac8-a9a5-d18aaab26c7f
 # ╠═0eb3624b-ef7d-42d5-8c58-17518daea5e1
 # ╟─484464ba-726a-4583-aaa6-52944599c2d0
 # ╠═9cf304d8-0087-4f45-bc5b-4f59ec6ec607
-# ╠═a9cd095f-4713-441e-8f3d-ef6cadbef293
+# ╠═c482122f-4679-4d95-b45a-7ffe37b1a317
+# ╟─a9cd095f-4713-441e-8f3d-ef6cadbef293
 # ╠═47d0a9ea-e68f-4cb2-9f73-0900553da1c9
 # ╠═e86b297b-6aa9-4b60-8160-96b1ef1496dc
 # ╟─b83e939f-90f4-4e44-8caf-ba5d59605ebc
 # ╠═15b8cfc1-e8b8-4727-a45a-5a20f4833f35
+# ╠═a1745e37-5bd6-455a-8ba5-91bc55eff736
+# ╠═43f1fbdf-64ec-4b2c-b456-1845383c4d6c
+# ╠═b08ee620-a0f2-4da5-bfe3-f98b87396a16
+# ╠═bd6bea5f-1676-41c0-b0ef-3be3ef201cf9
 # ╠═1b725a48-ea47-4f19-bbbc-95389b6772ba
 # ╠═3e42bf09-8b68-401b-a51a-838853cf116c
 # ╟─227ffbe4-3fb6-42c6-a2b1-9de6a55efbdd
